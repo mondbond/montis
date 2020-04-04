@@ -17,16 +17,14 @@ public class FileUploadController {
 	@Autowired
 	FileStorageService fileStorageService;
 
-
 	@RequestMapping(method = RequestMethod.POST, value = "uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 	public String uploadFileView(@RequestParam MultipartFile file) throws IOException {
 		fileStorageService.persistFile(file);
 		return "file_process";
 	}
 
-	@RequestMapping(method = RequestMethod.POST, value = "uploadText")
-	public String uploadFileView(@RequestParam("text") String text) {
-		return "file_process";
+	@RequestMapping(method = RequestMethod.GET, value = "getUpload")
+	public String uploadFileView() {
+		return "upload_file";
 	}
-
 }

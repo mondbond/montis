@@ -1,29 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--
+  Created by IntelliJ IDEA.
+  User: ibahr
+  Date: 4/4/2020
+  Time: 1:48 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Guru Uploading File</title>
+    <title>MENU</title>
 </head>
 <body>
-File: <br />
-<form action="uploadFile" method="post"
-      enctype="multipart/form-data">
-    <input type="file" class="file" name="file" size="500000" />
-    <br />
-    <input type="submit" value="Upload" />
-</form>
-
+<a></a>
 <br/>
 
-String: <br />
-<form action="uploadText" method="post"
-      enctype="text">
-    <input type="text" name="text"/>
-    <br />
-    <input type="submit" value="Upload" />
-</form>
+<a></a>
+<br/>
 
+<a></a>
+<br/>
+
+<a></a>
+<br/>
 </body>
 </html>

@@ -1,16 +1,14 @@
 package com.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
 
 
-	@RequestMapping(method = GET, value = "home")
+	@GetMapping(value = "home")
 	public String getHome(){
-		return "home";
+		return "menu";
 	}
 }

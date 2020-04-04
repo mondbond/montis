@@ -11,10 +11,11 @@
     <title>MENU</title>
 </head>
 <body>
-<a></a>
-<br/>
 
-<a></a>
+<
+
+<br />
+<a href="getUpload">upload file</a>
 <br/>
 
 <a></a>
