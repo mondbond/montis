@@ -1,4 +1,4 @@
-package service.storage;
+package com.service.storage;
 
 import org.springframework.web.multipart.MultipartFile;
 

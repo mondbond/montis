@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="montis:war">
+    <output-path>$PROJECT_DIR$/montis/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>montis</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="mons_war.war">
+      <element id="artifact" artifact-name="montis:war exploded" />
+    </root>
+  </artifact>
+</component>
