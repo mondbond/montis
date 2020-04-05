@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.dao.fileUpload.BookFileMetadata;
 import com.service.storage.FileStorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -18,8 +19,12 @@ public class FileUploadController {
 	FileStorageService fileStorageService;
 
 	@RequestMapping(method = RequestMethod.POST, value = "uploadFile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public String uploadFileView(@RequestParam MultipartFile file) throws IOException {
-		fileStorageService.persistFile(file);
+	public String uploadFileView(@RequestParam(value = "file") MultipartFile file,
+	                             @RequestParam(value = "authorName") String authorName,
+	                             @RequestParam(value = "authorSurName") String authorSurName,
+	                             @RequestParam(value = "authorBookName") String authorBookName) throws IOException {
+
+		fileStorageService.persistFile(new BookFileMetadata(authorName, authorSurName, authorBookName, file));
 		return "file_process";
 	}
 

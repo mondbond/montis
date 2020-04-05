@@ -19,11 +19,11 @@ public class HomeController {
 	@GetMapping(value = "home")
 	public String getHome(){
 
-		Transaction transaction = sessionFactory.getCurrentSession().getTransaction();
-		transaction.begin();
-		sessionFactory.getCurrentSession().save(new Word(String.valueOf(System.currentTimeMillis()), "work"));
-		transaction.commit();
-		sessionFactory.getCurrentSession().close();
+//		Transaction transaction = sessionFactory.getCurrentSession().getTransaction();
+//		transaction.begin();
+//		sessionFactory.getCurrentSession().save(new Word(String.valueOf(System.currentTimeMillis()), "work"));
+//		transaction.commit();
+//		sessionFactory.getCurrentSession().close();
 
 		return "menu";
 	}

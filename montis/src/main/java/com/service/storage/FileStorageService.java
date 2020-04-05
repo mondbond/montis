@@ -1,5 +1,6 @@
 package com.service.storage;
 
+import com.dao.fileUpload.BookFileMetadata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -18,12 +19,12 @@ public class FileStorageService implements FileStorage {
 	@Autowired
 	ServletContext context;
 
-	public String persistFile(MultipartFile file) throws IOException {
+	public String persistFile(BookFileMetadata bookFileMetadata) throws IOException {
 
 		String path = context.getRealPath("/");
 		ensureStorageExist(path);
 
-		persistFile(file, path);
+		persistFile(bookFileMetadata, path);
 		return null;
 	}
 
@@ -32,11 +33,11 @@ public class FileStorageService implements FileStorage {
 		storageDir.mkdir();
 	}
 
-	private void persistFile(MultipartFile file, String path) throws IOException {
-		byte[] bytes = file.getBytes();
+	private void persistFile(BookFileMetadata file, String path) throws IOException {
+		byte[] bytes = file.getFile().getBytes();
 
 		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(
-				new File(path + "/" + STORAGE_FOLDER + "/" + file.getOriginalFilename())));
+				new File(path + "/" + STORAGE_FOLDER + "/" + file.generateFileName())));
 		stream.write(bytes);
 		stream.flush();
 		stream.close();
