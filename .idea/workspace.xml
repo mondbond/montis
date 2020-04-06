@@ -7,28 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee820de-0cdf-4835-8cd9-fa756c942ce9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileReaderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/dto/BookFileReadMetadata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileReaderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileStorageServiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/util/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/util/ConverterUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/util/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/montis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/montis/montis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/montis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/fileUpload/BookFileMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/dto/BookFileUploadMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorageService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/montis/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,9 +48,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
+            <state relative-caret-position="357">
               <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -109,7 +109,6 @@
         <option value="$PROJECT_DIR$/montis/pom.xml" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java" />
         <option value="$PROJECT_DIR$/montis/src/main/resources/WEB-INF/views/upload_file.jsp" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorageService.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorage.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/fileUpload/BookFileMetadata.java" />
@@ -126,11 +125,12 @@
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/dto/BookFileUploadMetadata.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileReaderServiceImpl.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityMeneger.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Book.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -170,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,110 +178,10 @@
               <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="lit_project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -417,9 +318,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="montis:war" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -445,7 +344,8 @@
       <workItem from="1586083989692" duration="1521000" />
       <workItem from="1586097843734" duration="1774000" />
       <workItem from="1586099692361" duration="1782000" />
-      <workItem from="1586101555879" duration="387000" />
+      <workItem from="1586101555879" duration="1389000" />
+      <workItem from="1586170458331" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="move service to com package">
       <created>1585996326147</created>
@@ -461,18 +361,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586022983654</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added processing storage and saving texts to db *not checked">
+      <created>1586102031378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586102031378</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14788000" />
+    <option name="totallyTimeSpent" value="16537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Grunt " order="0" sideWeight="0.48502994" side_tool="true" weight="0.26066098" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.40242916" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.4097166" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -571,7 +478,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="move service to com package" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="added processing storage and saving texts to db *not checked" />
+    <option name="LAST_COMMIT_MESSAGE" value="added processing storage and saving texts to db *not checked" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e92bb0a0-2784-4367-b901-e443b9b818e8/console.sql">
@@ -625,13 +533,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/montis/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -650,16 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -791,9 +682,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="357">
           <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -801,13 +712,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
