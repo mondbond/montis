@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class ConverterUtil {
 
 	public static String fileToString(File file) throws IOException {
-		InputStream is = new FileInputStream("manifest.mf");
+		InputStream is = new FileInputStream(file);
 		BufferedReader buf = new BufferedReader(new InputStreamReader(is));
 		String line = buf.readLine();
 		StringBuilder sb = new StringBuilder();

@@ -26,5 +26,6 @@
 		<property name="hibernate.dbcp.minIdle">5</property>
 		<property name="hibernate.dbcp.maxWaitMillis">-1</property>
 		<mapping class="com.dao.Word" />
+		<mapping class="com.dao.dto.Book" />
 	</session-factory>
 </hibernate-configuration>
