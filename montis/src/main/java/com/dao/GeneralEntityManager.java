@@ -16,7 +16,7 @@ public class GeneralEntityManager<T> {
 	public boolean save(T entity) {
 		Transaction transaction = sessionFactory.getCurrentSession().getTransaction();
 		transaction.begin();
-		sessionFactory.getCurrentSession().save(entity);
+		sessionFactory.getCurrentSession().saveOrUpdate(entity);
 		transaction.commit();
 		sessionFactory.getCurrentSession().close();
 
@@ -28,7 +28,7 @@ public class GeneralEntityManager<T> {
 		transaction.begin();
 
 		for (T entity : entities) {
-			sessionFactory.getCurrentSession().save(entity);
+			sessionFactory.getCurrentSession().saveOrUpdate(entity);
 		}
 
 		transaction.commit();

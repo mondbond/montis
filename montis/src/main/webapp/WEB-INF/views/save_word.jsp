@@ -27,28 +27,28 @@
     </c:otherwise>
 </c:choose>
 
-<h1 STYLE="color: <c:out value="${firstColor}"/>">MENU</h1>
+<h1 STYLE="color: <c:out value="${firstColor}"/>">UPLOAD FILE</h1>
 <br/>
 
 
+<div  style="background-color: <c:out value= "${firstColor}"/>; height: 200px; width: 300px; margin-left: 200px; border-radius:3px;">
 
-<div  style="background-color: <c:out value= "${firstColor}"/>; height: 370px; width: 900px; border-radius:3px">
-    <h2>Information for : <%= session.getAttribute("name")%></h2>
-    <p>Now is <%= LocalDate.now().toString()%></p>
-    <p>Your addres is <%= request.getRemoteAddr()%> and port is <%= request.getRemotePort()%></p>
-    <p>and host is <%= request.getRemoteHost()%></p>
-    <p>Session id <%= session.getId()%></p>
-    <p>Last session date <%= new Date(session.getLastAccessedTime())%></p>
-    <p>Is session new <%= session.isNew()%></p>
-    <p>Session creation date <%= new Date(session.getCreationTime())%></p>
+    <form action="saveWord" method="post" enctype="application/x-www-form-urlencoded">
+        <input type="text" class="text-input" name="word" size="5000" style="width: 100px"/>
+        <br />
+        <input type="submit" value="Save word" />
+    </form>
+    <p>
+        Next words updated:
+    </p>
+    <p>
+        <c:out value='${saved}' />
+    </p>
+
 </div>
-
 <br />
 <div  style="background-color: <c:out value= "${secondColor}"/>; height: 200px; width: 300px; margin-left: 200px; border-radius:3px;">
-    <a href="getUpload">Upload file</a>
-    <br/>
-    <a href="saveWord">Save word</a>
-
+    <a href="home">Go home</a>
 </div>
 
 

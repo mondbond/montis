@@ -1,21 +1,37 @@
 package com.controller;
 
-import com.dao.Word;
+import com.dao.semapi.WordsAPIRequest;
+import com.dao.semapi.WordsApiDaoImpl;
+import com.dao.semapi.dto.WordApiWord;
+import com.service.WordService;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+
 @Controller
 public class HomeController {
 
+//	@Autowired
+//	SessionFactory sessionFactory;
+//
 	@Autowired
-	SessionFactory sessionFactory;
+	HttpSession session;
+
+//	@Autowired
+//	WordsApiDaoImpl wordApi;
+
+	@Autowired
+	WordService wordService;
 
 	@GetMapping(value = "home")
-	public String getHome(){
+	public String getHome() throws IOException {
+
+
+		session.setAttribute("name", "Ivan");
 		return "menu";
 	}
 }
