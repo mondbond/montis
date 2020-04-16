@@ -27,7 +27,7 @@
 		<property name="hibernate.dbcp.maxWaitMillis">-1</property>
 <!--		<mapping class="com.dao.Word" />-->
 		<mapping class="com.dao.dto.Book" />
-		<mapping class="com.dao.dto.SpeechPart" />
+		<mapping class="com.dao.dto.Definition" />
 		<mapping class="com.dao.dto.Word" />
 	</session-factory>
 </hibernate-configuration>

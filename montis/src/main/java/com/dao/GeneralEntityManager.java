@@ -1,5 +1,6 @@
 package com.dao;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,25 +15,44 @@ public class GeneralEntityManager<T> {
 	SessionFactory sessionFactory;
 
 	public boolean save(T entity) {
-		Transaction transaction = sessionFactory.getCurrentSession().getTransaction();
-		transaction.begin();
-		sessionFactory.getCurrentSession().saveOrUpdate(entity);
-		transaction.commit();
-		sessionFactory.getCurrentSession().close();
 
+		final Session session = sessionFactory.openSession();
+		try {
+			final Transaction transaction = session.beginTransaction();
+			try {
+				session.saveOrUpdate(entity);
+				System.out.println("Persisted: " + entity.toString());
+				transaction.commit();
+			} catch (Exception ex) {
+				transaction.rollback();
+				throw ex;
+			}
+		} finally
+		{
+			session.close();
+		}
 		return true;
 	}
 
 	public boolean saveAll(List<T> entities) {
-		Transaction transaction = sessionFactory.getCurrentSession().getTransaction();
-		transaction.begin();
-
-		for (T entity : entities) {
-			sessionFactory.getCurrentSession().saveOrUpdate(entity);
+		final Session session = sessionFactory.openSession();
+		try {
+			final Transaction transaction = session.beginTransaction();
+			try {
+				for (T entity : entities) {
+					session.save(entity);
+					System.out.println("Persisted: " + entity.toString());
+//					session.clear();
+				}
+				transaction.commit();
+			} catch (Exception ex) {
+				transaction.rollback();
+				throw ex;
+			}
+		} finally {
+			session.close();
 		}
 
-		transaction.commit();
-		sessionFactory.getCurrentSession().close();
 
 		return true;
 	}

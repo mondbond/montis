@@ -1,5 +1,7 @@
 package com.dao.semapi.dto;
 
+import com.dao.semapi.dto.definition.Definition;
+import com.dao.semapi.dto.definition.WordMeaning;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,7 @@ public class WordApiWord {
 
 
 	private String word;
-	private List<String> partOfSpeech;
+	private List<Definition> definitions;
 	private double perMillion;
 	private double diversity;
 	private double zipf;

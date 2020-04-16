@@ -38,9 +38,9 @@ public class SaveWordController {
 
 	@PostMapping(name = "saveWord", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public String persistWordToDb(@RequestBody MultiValueMap<String, String> values, Model model) throws IOException {
-		wordService.persistWords(parser.parse(Objects.requireNonNull(values.getFirst("word"))));
+		wordService.persistWords(parser.parse(Objects.requireNonNull(Objects.requireNonNull(values.getFirst("word")))));
 
-		model.addAttribute("saved", values.getFirst("word"));
+//		model.addAttribute("saved", values.getFirst("word"));
 		return "save_word";
 	}
 }

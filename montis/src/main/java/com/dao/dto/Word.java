@@ -12,7 +12,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Setter
@@ -37,9 +39,13 @@ public class Word {
 	@Column
 	boolean doubleWord;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "speech_part_and_word",
-		joinColumns = { @JoinColumn(name = "word") },
-		inverseJoinColumns = { @JoinColumn(name = "name") })
-	List<SpeechPart> speechParts;
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "id.word")
+	List<Definition> definitions;
+
+	@Override
+	public String toString() {
+		return "Word{" +
+				"word='" + word + '\'' +
+				'}';
+	}
 }

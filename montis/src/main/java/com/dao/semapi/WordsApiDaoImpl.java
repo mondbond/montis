@@ -32,7 +32,7 @@ public class WordsApiDaoImpl {
 
 		return WordApiWord.builder()
 				.word(word)
-				.partOfSpeech(wordMeaning.definitions.stream().map(Definition::getPartOfSpeech).distinct().collect(Collectors.toList()))
+				.definitions(wordMeaning.definitions)
 				.diversity(wordFrequency.frequency.diversity)
 				.perMillion(wordFrequency.frequency.perMillion)
 				.zipf(wordFrequency.frequency.zipf)

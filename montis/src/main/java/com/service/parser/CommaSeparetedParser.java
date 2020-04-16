@@ -12,6 +12,6 @@ public class CommaSeparetedParser implements Parser {
 
 	@Override
 	public List<String> parse(String text) {
-		return Arrays.asList(text.split(","));
+		return Arrays.asList(text.split(" "));
 	}
 }
