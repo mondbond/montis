@@ -7,18 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ee820de-0cdf-4835-8cd9-fa756c942ce9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Definition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/DefinitionIdentity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/LayerParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/Paragraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextSentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/analize_text.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/SpeechPart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/WordsApiDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/WordsApiDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/WordApiWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/WordApiWord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/montis/src/main/java/com/service/parser/CommaSeparetedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/java/com/service/parser/CommaSeparetedParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/montis/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,24 +50,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+            <state relative-caret-position="170">
+              <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,20 +66,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="578">
+              <caret line="34" column="34" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#805#806#0" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Definition.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="289">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,10 +90,72 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Word.java">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="544">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+                <element signature="e#1428#1429#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/save_word.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/upload_file.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="10" selection-start-line="9" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/analize_text.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,8 +169,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -134,18 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/resources/WEB-INF/views/upload_file.jsp" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorageService.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileStorage.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/fileUpload/BookFileMetadata.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/Word.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileStorageService.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/fileUpload/BookFileMetadata.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileReaderService.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/fileUpload/BookFileUploadMetadata.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileStorageServiceService.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/fileUpload/BookFileReadMetadata.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/util/Constants.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/storage/dto/BookFileUploadMetadata.java" />
@@ -169,22 +214,34 @@
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/Frequency.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/definition/Definition.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/SpeachPart.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/parser/Parser.java" />
         <option value="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/save_word.jsp" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/service/parser/CommaSeparetedParser.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/SpeechPart.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/DefinitiionIdentity.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/WordApiWord.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/WordsApiDaoImpl.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/DefinitionIdentity.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Word.java" />
-        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java" />
         <option value="$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Definition.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/Sentence.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/Paragraph.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextSentence.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextStructure.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextParser.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextSentence.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/Paragraph.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextStructure.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextWord.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/analize_text.jsp" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java" />
+        <option value="$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java" />
       </list>
     </option>
   </component>
@@ -222,17 +279,16 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="240" />
-    <option name="y" value="126" />
-    <option name="width" value="1440" />
-    <option name="height" value="765" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -284,7 +340,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
@@ -294,29 +350,30 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
+              <item name="montis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="textparser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
+              <item name="montis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="textparser" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
-              <item name="montis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
@@ -343,10 +400,21 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lit_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lit_project" type="462c0819:PsiDirectoryNode" />
+              <item name="montis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,7 +614,12 @@
       <workItem from="1587041031162" duration="1775000" />
       <workItem from="1587043042884" duration="2028000" />
       <workItem from="1587045733071" duration="1784000" />
-      <workItem from="1587047615868" duration="629000" />
+      <workItem from="1587047615868" duration="788000" />
+      <workItem from="1587108703775" duration="2090000" />
+      <workItem from="1587112834413" duration="345000" />
+      <workItem from="1587119552630" duration="1770000" />
+      <workItem from="1587121790565" duration="1750000" />
+      <workItem from="1587123724207" duration="1347000" />
     </task>
     <task id="LOCAL-00001" summary="move service to com package">
       <created>1585996326147</created>
@@ -573,14 +646,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57335000" />
+    <option name="totallyTimeSpent" value="64796000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Grunt " order="0" sideWeight="0.48502994" side_tool="true" weight="0.26066098" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.25182188" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.2675906" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -591,17 +664,17 @@
       <window_info id="Persistence" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3250444" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69959515" weight="0.3250444" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7771855" weight="0.71047956" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69959515" weight="0.8819068" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.7771855" visible="true" weight="0.58829904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.47761193" weight="0.3954496" />
-      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.4978678" weight="0.5559503" />
-      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.4989339" weight="0.3629469" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.4989339" weight="0.3629469" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4978678" weight="0.5557963" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.71695095" weight="0.531961" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.30040485" side_tool="true" weight="0.78330374" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.7110874" weight="0.47602132" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.7110874" weight="0.40195015" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49733475" weight="0.32827735" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="15" sideWeight="0.4989339" weight="0.5222102" />
@@ -620,14 +693,14 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Bean Validation" order="8" sideWeight="0.49856323" weight="0.32675907" />
-      <window_info anchor="right" id="Maven" order="9" sideWeight="0.6131934" weight="0.18218623" />
+      <window_info anchor="right" id="Maven" order="9" sideWeight="0.6131934" visible="true" weight="0.18176973" />
       <window_info anchor="right" id="Database" order="10" sideWeight="0.4928161" weight="0.21781376" />
       <window_info anchor="right" id="Structure" order="11" sideWeight="0.19501625" side_tool="true" weight="0.21002132" />
       <window_info anchor="right" id="JRebel Setup Guide" order="12" weight="0.15778251" />
     </layout>
     <layout-to-restore>
       <window_info id="Grunt " order="0" sideWeight="0.48502994" side_tool="true" weight="0.26066098" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.25182188" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.70231956" visible="true" weight="0.26812366" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -638,8 +711,8 @@
       <window_info id="Persistence" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.3250444" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69959515" weight="0.3250444" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.7771855" visible="true" weight="0.41740674" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.69959515" weight="0.8827709" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7771855" visible="true" weight="0.5167931" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.47761193" weight="0.3954496" />
@@ -648,7 +721,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.71695095" weight="0.531961" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.30040485" side_tool="true" weight="0.78330374" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.7110874" weight="0.47602132" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.7110874" weight="0.40195015" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" sideWeight="0.49733475" weight="0.32827735" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="15" sideWeight="0.4989339" weight="0.5222102" />
@@ -699,31 +772,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java</url>
-          <line>43</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java</url>
-          <line>50</line>
+          <line>48</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java</url>
-          <line>49</line>
+          <line>47</line>
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java</url>
-          <line>52</line>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java</url>
-          <line>73</line>
+          <line>80</line>
           <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
@@ -750,6 +823,30 @@
           <line>48</line>
           <properties />
           <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -804,97 +901,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/target/mons_war/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/TextService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/FileReaderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/storage/impl/FileReaderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/ConverterUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/file_process.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/FileUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="239" selection-start-line="1" selection-start-column="239" selection-end-line="1" selection-end-column="239" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="89" column="21" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency.java" />
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/Properties_.java" />
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/Properties.java" />
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/PerMillion.java" />
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/Diversity.java" />
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/semapi/dto/frequency/Zipf.java" />
@@ -983,18 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/ProcessStorageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1027,37 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/upload_file.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="10" selection-start-line="9" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/save_word.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,13 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/DefinitionIdentity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -1128,30 +1084,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/ConverterUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/Paragraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextSentence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/dto/TextStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63359">
+          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+          <folding>
+            <element signature="e#177013#177014#0" expanded="true" />
+            <element signature="e#177054#177055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Definition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Word.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="493">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java">
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TextWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1160,18 +1198,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/WordService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="73" column="26" lean-forward="true" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/LayerParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/GeneralEntityManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/dao/dto/Definition.java">
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/FileUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="544">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1428#1429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/upload_file.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="10" selection-start-line="9" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/analize_text.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/webapp/WEB-INF/views/save_word.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/AnalizeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/controller/SaveWordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/montis/src/main/java/com/service/textparser/TxtTextParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

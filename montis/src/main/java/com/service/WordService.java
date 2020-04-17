@@ -12,9 +12,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 @Service
 public class WordService {
@@ -45,7 +43,7 @@ public class WordService {
 
 
 	public void persistWord(String word) throws IOException {
-		System.out.println("Persisting word ==== " + word);
+		System.out.println("Downloading word ==== " + word);
 		try {
 			WordApiWord wordToPersist = wordsApiDao.getWord(word);
 			entityManager.save(mapper.apply(wordToPersist));
@@ -55,23 +53,32 @@ public class WordService {
 	}
 
 	public void persistWords(List<String> words) throws IOException {
-		ArrayList<Word> wordsToPersist = new ArrayList<>();
+//		ArrayList<Word> wordsToPersist = new ArrayList<>();
+//
+//		words.forEach(word -> {
+//			System.out.println(word + " download :");
+//			WordApiWord apiData = null;
+//			try {
+//				apiData = wordsApiDao.getWord(word);
+//			} catch (Exception e) {
+//				System.out.println(word + " NOT DOWNLOADED: " + e.getMessage());
+//			}
+//
+//			if(apiData != null) {
+//				wordsToPersist.add(mapper.apply(apiData));
+//			}
+//		});
 
-		words.forEach(word -> {
-			System.out.println(word + " download :");
-			WordApiWord apiData = null;
+
+		words.forEach(word->{
 			try {
-				apiData = wordsApiDao.getWord(word);
-			} catch (Exception e) {
-				System.out.println(word + " NOT DOWNLOADED: " + e.getMessage());
-			}
-
-			if(apiData != null) {
-				wordsToPersist.add(mapper.apply(apiData));
+				persistWord(word);
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		});
 
-		entityManager.saveAll(wordsToPersist);
+//		entityManager.saveAll(wordsToPersist);
 //		wordsToPersist.forEach(word -> entityManager.save(word));
 	}
 }

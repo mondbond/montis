@@ -1,8 +1,6 @@
 package com.controller;
 
-import com.dao.semapi.WordsAPIRequest;
-import com.dao.semapi.WordsApiDaoImpl;
-import com.dao.semapi.dto.WordApiWord;
+
 import com.service.WordService;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +27,6 @@ public class HomeController {
 
 	@GetMapping(value = "home")
 	public String getHome() throws IOException {
-
-
 		session.setAttribute("name", "Ivan");
 		return "menu";
 	}
