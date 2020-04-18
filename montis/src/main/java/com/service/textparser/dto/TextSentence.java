@@ -19,14 +19,8 @@ public class TextSentence {
 	private int wordsCount;
 	private String sentenceType;
 	private int sentenceLength;
+	private int avgWordLength;
+	private int commaCount;
 
-
-	public void finilize(){
-
-	}
-
-	public void appendWord() {
-
-	}
 
 }

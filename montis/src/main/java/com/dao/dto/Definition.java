@@ -29,7 +29,7 @@ public class Definition {
 	public Definition() {
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "word", referencedColumnName = "word", insertable = false, updatable = false)
 	com.dao.dto.Word definitionWord;
 

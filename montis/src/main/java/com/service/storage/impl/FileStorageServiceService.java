@@ -33,6 +33,9 @@ public class FileStorageServiceService implements com.service.storage.FileStorag
 	}
 
 	private void persistFile(BookFileUploadMetadata file, String path) throws IOException {
+
+
+
 		byte[] bytes = file.getFile().getBytes();
 
 		BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(

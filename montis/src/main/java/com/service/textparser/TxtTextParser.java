@@ -3,6 +3,7 @@ package com.service.textparser;
 import com.service.textparser.dto.Paragraph;
 import com.service.textparser.dto.TextSentence;
 import com.service.textparser.dto.TextStructure;
+import com.util.SemanticAPIUtil;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -47,27 +48,24 @@ public class TxtTextParser implements TextParser {
 
 		StringBuilder word = new StringBuilder();
 
-		for (char c : sentenceChar) {
-			if(c == ' '){
+		for (int c = 0; c <= sentenceChar.length -1; c++) {
+			if(sentenceChar[c] == ' ' || c == sentenceChar.length -1) {
 				result.add(TextWord.builder()
 						.word(word.toString())
 						.build());
 				word = new StringBuilder();
 			}
 
-			else if(isSign(c)) {
-				result.add(TextWord.builder().word(String.valueOf(c)).isWord(false).build());
+			else if(SemanticAPIUtil.isSeparatedSign(String.valueOf(sentenceChar[c]))) {
+				result.add(TextWord.builder().word(String.valueOf(sentenceChar[c])).isSeparatedSign(false).build());
 			}
 
 			else {
-				word.append(c);
+				word.append(sentenceChar[c]);
 			}
 		}
 
 		return result;
 	}
 
-	private boolean isSign(char c){
-		return (c == ',' || c == ':' || c==';');
-	}
 }

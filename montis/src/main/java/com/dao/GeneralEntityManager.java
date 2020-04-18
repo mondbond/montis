@@ -1,11 +1,13 @@
 package com.dao;
 
+import com.sun.javafx.util.Utils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service
@@ -53,7 +55,45 @@ public class GeneralEntityManager<T> {
 			session.close();
 		}
 
-
 		return true;
+	}
+
+	public boolean exist(T entity, String key) {
+		final Session session = sessionFactory.openSession();
+		T result = null;
+		try {
+			final Transaction transaction = session.beginTransaction();
+			try {
+				result = (T) session.get(entity.getClass(), key);
+				transaction.commit();
+			} catch (Exception ex) {
+				transaction.rollback();
+				throw ex;
+			}
+		} finally {
+			session.close();
+		}
+
+		return result != null;
+	}
+
+
+	public T getById(Class className, String key) {
+		final Session session = sessionFactory.openSession();
+		T result = null;
+		try {
+			final Transaction transaction = session.beginTransaction();
+			try {
+				result = (T) session.get(className, key);
+				transaction.commit();
+			} catch (Exception ex) {
+				transaction.rollback();
+				throw ex;
+			}
+		} finally {
+			session.close();
+		}
+
+		return result;
 	}
 }
