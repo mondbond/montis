@@ -53,7 +53,7 @@ public class Word {
 	}
 
 	public String getSpeechPartOrNull() {
-		if(definitions != null && definitions.get(0) != null){
+		if(definitions != null && definitions.size() > 0 && definitions.get(0) != null){
 			return StringUtils.isNotEmpty(definitions.get(0).getSpeechPart()) ? definitions.get(0).getSpeechPart() : null;
 		}
 		return null;

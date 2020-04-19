@@ -3,6 +3,7 @@ package com.service.textparser;
 import com.dao.GeneralEntityManager;
 import com.dao.WordDAO;
 import com.dao.dto.Word;
+import com.service.WordService;
 import com.service.textparser.dto.Paragraph;
 import com.service.textparser.dto.TextSentence;
 import com.service.textparser.dto.TextStructure;
@@ -19,7 +20,7 @@ public class TextAalizer {
 	GeneralEntityManager<Word> entityManager;
 
 	@Autowired
-	WordDAO wordDAO;
+	WordService wordDAO;
 
 
 
@@ -66,6 +67,7 @@ public class TextAalizer {
 
 	private void processParagraph(Paragraph paragraph){
 		paragraph.setSentenceCount(paragraph.getSentences().size());
+		paragraph.setSentenceAvgLength(paragraph.getSentences().stream().map(sentence -> sentence.getWordsCount()).reduce((l, r) -> l + r).get()/paragraph.getSentences().size());
 		paragraph.setParagraphLength(paragraph.getSentences().stream().map(sentence -> sentence.getSentenceLength()).reduce((l, r) -> l + r).get());
 	}
 }

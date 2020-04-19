@@ -58,13 +58,13 @@ public class GeneralEntityManager<T> {
 		return true;
 	}
 
-	public boolean exist(T entity, String key) {
+	public boolean exist(Class entity, String key) {
 		final Session session = sessionFactory.openSession();
 		T result = null;
 		try {
 			final Transaction transaction = session.beginTransaction();
 			try {
-				result = (T) session.get(entity.getClass(), key);
+				result = (T) session.get(entity, key);
 				transaction.commit();
 			} catch (Exception ex) {
 				transaction.rollback();

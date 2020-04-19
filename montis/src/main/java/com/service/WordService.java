@@ -7,6 +7,7 @@ import com.dao.dto.Word;
 import com.dao.semapi.WordsApiDaoImpl;
 import com.dao.semapi.dto.WordApiWord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+@Scope("singleton")
 @Service
 public class WordService {
 
@@ -22,6 +24,8 @@ public class WordService {
 
 	@Autowired
 	GeneralEntityManager<Word> entityManager;
+
+	private int wordToRequestLimit = 20;
 
 	private Function<WordApiWord, Word> mapper = wordApiWord -> {
 		ArrayList<Definition> definitions = new ArrayList<>();
@@ -43,12 +47,12 @@ public class WordService {
 
 
 	public void persistWord(String word) throws IOException {
-		System.out.println("Downloading word ==== " + word);
+//		System.out.println("Downloading word ==== " + word);
 		try {
 			WordApiWord wordToPersist = wordsApiDao.getWord(word);
 			entityManager.save(mapper.apply(wordToPersist));
 		} catch (Exception e) {
-			System.out.println("Persisted word 0000 " + word + " not persisted: " + e.getMessage());
+//			System.out.println("Persisted word 0000 " + word + " not persisted: " + e.getMessage());
 		}
 	}
 
@@ -80,5 +84,31 @@ public class WordService {
 
 //		entityManager.saveAll(wordsToPersist);
 //		wordsToPersist.forEach(word -> entityManager.save(word));
+	}
+
+
+	public Word findWordOrPersist(String word){
+		Word dbWord = entityManager.getById(com.dao.dto.Word.class, word);
+
+		if(dbWord == null && isNotLimited()) {
+			System.out.println("WORD " + word + " downloading");
+			try {
+				persistWord(word);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		return entityManager.getById(com.dao.dto.Word.class, word);
+	}
+
+	private boolean isNotLimited(){
+		if (wordToRequestLimit > 0) {
+			wordToRequestLimit--;
+			return true;
+		}
+
+		System.out.println("LIMIT OVER");
+		return false;
 	}
 }

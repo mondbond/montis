@@ -39,8 +39,15 @@ public class AnalizeController {
 
 	@PostMapping(value = "analize")
 	public String analizeTxt(@RequestBody MultiValueMap<String, String> values) {
-		writeImageType.draw(textAnalizerService.process(values.getFirst("text")), context.getRealPath("/"));
+		TextStructure textStructure = textAnalizerService.process(values.getFirst("text"));
+		printLog(textStructure);
+		writeImageType.draw(textStructure, context.getRealPath("/"));
 
 		return "analize_text";
+	}
+
+	private void printLog(TextStructure textStructure){
+		System.out.println("INFO: " + "sentence count "+  textStructure.getParagraphs().get(0).getSentenceCount() + " " );
+		System.out.println("INFO: " +  "sentence avg " + textStructure.getParagraphs().get(0).getSentenceAvgLength() + " " );
 	}
 }

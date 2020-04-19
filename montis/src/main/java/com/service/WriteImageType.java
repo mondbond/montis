@@ -21,7 +21,7 @@ public class WriteImageType {
 
 	public void draw(TextStructure textStructure, String path) {
 
-		int width = 600, height = 200;
+		int width = 1600, height = 600;
 		BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D ig2 = bi.createGraphics();
 		ig2.setPaint(Color.black);
@@ -88,6 +88,9 @@ public class WriteImageType {
 				ig2.draw(shape);
 
 				startX += shape.width;
+
+				startX = 10;
+				startY += 10;
 			}
 
 
